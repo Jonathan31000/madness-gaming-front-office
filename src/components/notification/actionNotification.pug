@@ -1,0 +1,5 @@
+div(class=`action-${notificationId} ${text ? "btn-mini btn--primary" : "btn-icon"} ${className ? className : ''}`)
+  if icon
+    img(src=icon)
+  else
+    | #{text}

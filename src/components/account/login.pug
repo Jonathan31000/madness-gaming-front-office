@@ -1,0 +1,17 @@
+.login-container
+  .title.center=title
+  -let onsubmitFunction = "Account.events.login.loginWebAccount(event)";
+  if type != "web"
+    -onsubmitFunction = "Account.events.login.loginHaptagramAccount(event)";
+  form.form(action="#" method="post" id="login-form" onsubmit=onsubmitFunction)
+    .fieldset
+      .field
+        label.label(for="username") Email
+        input.input(type="text" name="username" id="username")
+      .field
+        label.label(for="password") Password
+        input.input(type="text" name="password" id="password")
+      .field
+        button.btn.btn--primary(type="submit") Login
+  if type == "web"
+    p.register-account-link(onclick="Account.events.login.redirectToRegisterModal()") Create new account

@@ -1,0 +1,5 @@
+@mixin setBackgroundImage($imgUrl,$size:1rem, $iconBackgroundColor: RGBA(255,255,255,0.05)) {
+    background: url($imgUrl) center center no-repeat;
+    background-color: $iconBackgroundColor;
+    background-size: $size auto;
+}

@@ -1,0 +1,87 @@
+@import "../../../public/style/colors";
+
+header {
+    background: $primary-ligth;
+    position: fixed;
+    z-index: 1000;
+    width: 15%;
+    height: 100%;
+}
+
+.nav-button-mobile {
+    display: none;
+}
+
+.nav-button-mobile-haptagram {
+    display: none;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+}
+
+.brand {
+    padding: 0 1rem 1rem;
+}
+
+.close-navigation-header, .open-navigation-header {
+    align-self: end;
+    font-size: 25px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.open-navigation-header {
+  display: none;
+}
+
+.nav-container-verticaly {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.nav-container-horizontaly {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.nav-item {
+    padding: 1rem 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    cursor: pointer;
+    &:hover {
+      background: $primary;
+      border-radius: 5px 5px 0 0;
+      transform: scale(1.02);
+      color: white; 
+    }
+    &:active {
+      background: gray;
+    }
+}
+
+.action-nav-item {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active-nav {
+    border-bottom: 2px solid #757575;
+    border-radius: 5px 5px 0 0;
+    background: #D18B13;
+    color: #F5F5F5;
+    border-right: none;
+}

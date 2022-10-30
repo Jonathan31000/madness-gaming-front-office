@@ -1,0 +1,11 @@
+.navigation-tab{
+    display: flex;
+}
+
+.navigation-tab .navigation-tab-item{
+    font-size: .9rem;
+    margin-right: 2rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid $white;
+    cursor: pointer;
+}

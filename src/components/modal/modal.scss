@@ -1,0 +1,41 @@
+@import "../../../public/style/mixins";
+
+.modal-main-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.overlay {
+    background: goldenrod;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 998;
+}
+
+.modal-content-container {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    position: relative;
+    z-index: 999;
+    background: white;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-close-container {
+    text-align: right;
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 20px;
+    overflow: auto;
+}

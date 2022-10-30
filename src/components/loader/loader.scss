@@ -1,0 +1,68 @@
+@import "../../../public/style/colors";
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 2000;
+}
+
+.overlay-loader {
+    background: goldenrod;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: wait;
+    &.append {
+      background: none;
+      position: inherit;
+      opacity: 1;
+    }
+}
+
+.loader-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: wait;
+    position: fixed;
+    &.append {
+      position: inherit;
+    }
+}
+
+// .loader-content {
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     cursor: wait;
+//     z-index: 10000;
+//     position: relative;
+// }
+
+.loader {
+    border: 7px solid #f3f3f3;
+    border-top: 7px solid #282f33;
+    border-radius: 50%;
+    width: 260px;
+    height: 260px;
+    animation: spin 2s linear infinite;
+    &.append {
+      border: 7px solid $primary-ligth;
+      border-top: 7px solid $primary;
+    }
+}

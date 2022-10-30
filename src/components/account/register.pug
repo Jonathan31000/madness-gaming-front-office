@@ -1,0 +1,18 @@
+.register-container
+  .title.center="Register new account !"
+  form.form(action="#" method="post" id="register-form" onsubmit="Account.events.register.registerAccount(event)")
+    .fieldset
+      .field
+        label.label(for="username") Email
+        input.input(type="email" name="username" id="username")
+      .field
+        label.label(for="password") Password
+        input.input(type="text" name="password" id="password")
+      .field
+        label.label(for="firstname") Firstname
+        input.input(type="text" name="firstname" id="firstname")
+      .field
+        label.label(for="lastname") Lastname
+        input.input(type="text" name="lastname" id="lastname")
+      .field
+        button.btn.btn--primary(type="submit") Register

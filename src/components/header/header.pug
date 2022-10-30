@@ -1,0 +1,29 @@
+.header-container.wrapper
+  p.close-navigation-header <
+  p.open-navigation-header >
+  a.action-nav-item(href="/" class="brand")="Haptagram"
+  nav.nav
+    if profile
+      button(class="nav-button-mobile")="Menu"
+      ul(class="nav-container-verticaly")
+        if profile
+          li(class="nav-item")
+            a.action-nav-item(href="/mint-multiple-nft")="Mint multiple NFTs"
+          li(class="nav-item")
+            a.action-nav-item(href="/make-haptograph")="Make haptograph"
+        li(class="nav-item")
+          a.action-nav-item(href="/back-office-haptagram")="Back-Office Haptagram"
+        if profile && !profile.linkedAccountId
+          li(class="nav-item")
+            a.action-nav-item(onclick="Account.login('haptagram')")="Link Haptagram App account"
+        if profile && profile.linkedAccountId
+          li(class="nav-item")
+            a.action-nav-item(onclick="Account.events.logoutHaptagram()")="Disconnect from haptagram"
+        li(class="nav-item")
+          a.action-nav-item(onclick="Account.events.logoutWeb()")="Disconnect from web"
+        li(class="nav-item")
+          a.action-nav-item(href="/profile")="My profile"
+    else
+      ul(class="nav-container")
+        li(class="nav-item")
+          a.action-nav-item(onclick="Account.login()")="Connection"

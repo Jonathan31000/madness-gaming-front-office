@@ -1,0 +1,60 @@
+@import "../../../public/style/fonts";
+@import "../../../public/style/colors";
+@import "../../../public/style/mixins";
+
+notification {
+    position: fixed;
+    max-width: 35%;
+    height: 100%;
+    margin-left: 20px;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+}
+
+.notification-container {
+    padding: 10px;
+    display: flex;
+    border-radius: 6px;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+
+button.notification-hide {
+    cursor: pointer;
+}
+
+.notification-error{
+  background: rgba(255, 35, 50, 0.8);
+}
+
+.notification-success{
+  background: rgba(60, 179, 113, 0.8);
+}
+
+.notification-default{
+  background: rgba(154, 165, 52, 0.8);
+}
+
+.notification-message {
+    width: 100%;
+}
+
+.notification-close-container {
+     @include setBackgroundImage("../../../public/image/svg/close.svg", 1.5rem);
+     margin-left: 0.8rem;
+}
+
+.notification-action-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.image-camera-for-notification{
+  @include setBackgroundImage("../../../public/image/svg/camera-no-background.svg", 1.2rem, $orange);
+  margin-left: 0.8rem;
+}

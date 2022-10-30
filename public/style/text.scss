@@ -1,0 +1,43 @@
+@import "_colors";
+
+// .page-title {
+//     font-size: 2rem;
+//     font-weight: 600;
+//     text-align: center;
+//     padding-bottom: 3rem;
+// }
+
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    height: 18%;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.subtitle {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.center{
+  text-align: center;
+}
+
+.color-primary {
+  color: $orange
+}
+
+.color-danger {
+  color: $red
+}
+
+.color-success {
+  color: $green;
+}

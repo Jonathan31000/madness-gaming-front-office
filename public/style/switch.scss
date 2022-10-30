@@ -1,0 +1,39 @@
+.switch-background {
+    cursor: pointer;
+    float: right;
+    width: 48px;
+    margin-top: 4px;
+    height: 16px;
+    border-radius: 40px;
+    background: $blue-grey-4;
+    background-color: green;
+}
+
+.switch-selector {
+    cursor: pointer;
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    margin-right: -48px;
+}
+
+.switch[checked="false"]{
+    .switch-background {
+        background-color: $blue-grey-4;
+    }
+    .switch-selector {
+        margin-right: -24px;
+    }
+}
+
+.switch-label-right {
+  line-height: 24px;
+  margin-left: 70px;
+}
+
+.switch-title{
+    margin-left: .5rem;
+    font-size: .85rem;
+}

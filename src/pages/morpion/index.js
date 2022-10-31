@@ -12,8 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
+//tab = ["1-2", "2-1", ...];
+
 function checkWin(){
-  Morpion.player1
+  winPatern.map(el => {
+    let win = 0;
+    el.map(elem => {
+      if(Morpion.player1.indexOf(elem) != -1) win++;
+      if(win == 3) return console.log('WIN!!');
+    })
+  })
 }
 const winPatern = [
   ["0-0", "0-1", "0-2"],
@@ -32,6 +40,7 @@ let Morpion = {
   rowDraw : function(id){
     b(id).style.backgroundColor = "black";
     Morpion.player1.push(id);
+    checkWin();
   }
 }
 

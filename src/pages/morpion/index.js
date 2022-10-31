@@ -12,29 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
-let Morpion = {
-  user: [],
-  computer: [],
-  drawUserCase: function (id) {
-    b(id).style.backgroundColor = "black";
-    Morpion.user.push(id);
-    if(!checkWin()) drawComputerCase();
-  },
-}
-window.Morpion = Morpion;
-
-function drawComputerCase() {
-  let randomCase = "";
-  let availablePattern;
-  winPatern.map(elem => {
-    availablePattern = winPatern.filter(el => !Morpion.user.includes(elem));
-  })
-  console.log(availablePattern);
-  console.log(availablePattern.length);
-  b(randomCase).style.backgroundColor = "blue";
-  Morpion.computer.push(randomCase);
-}
-
 const winPatern = [
   ["0-0", "0-1", "0-2"],
   ["1-0", "1-1", "1-2"],
@@ -45,6 +22,32 @@ const winPatern = [
   ["0-0", "1-1", "2-2"],
   ["0-2", "1-1", "2-0"]
 ]
+
+let Morpion = {
+  user: [],
+  computer: [],
+  availablePattern: [...winPatern],
+  drawUserCase: function (id) {
+    b(id).style.backgroundColor = "black";
+    Morpion.user.push(id);
+    console.log(winPatern)
+    if(!checkWin()) drawComputerCase(Morpion.availablePattern);
+  },
+}
+window.Morpion = Morpion;
+
+function drawComputerCase(availablePattern) {
+  let randomCase = "";
+  let count = -1;
+  while (availablePattern[++count]){
+    let count2 = -1;
+    while(availablePattern[count][++count2]) {
+      if (Morpion.user.indexOf(availablePattern[count][count2]) != -1) test = availablePattern.splice(count, 1);
+    }
+  }
+  b(randomCase).style.backgroundColor = "blue";
+  Morpion.computer.push(randomCase);
+}
 
 function checkWin() {
   let isWin = false;

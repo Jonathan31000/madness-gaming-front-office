@@ -1,28 +1,23 @@
 .header-container.wrapper
-  p.close-navigation-header <
-  p.open-navigation-header >
-  a.action-nav-item(href="/" class="brand")="Haptagram"
+  a.action-nav-item(href="/" class="brand")="MadnessGaming"
   nav.nav
     if profile
       button(class="nav-button-mobile")="Menu"
-      ul(class="nav-container-verticaly")
+      ul(class="nav-container-horizontaly")
         if profile
           li(class="nav-item")
-            a.action-nav-item(href="/mint-multiple-nft")="Mint multiple NFTs"
+            a.action-nav-item(href="/morpion")="Morpion"
           li(class="nav-item")
-            a.action-nav-item(href="/make-haptograph")="Make haptograph"
-        li(class="nav-item")
-          a.action-nav-item(href="/back-office-haptagram")="Back-Office Haptagram"
-        if profile && !profile.linkedAccountId
+            a.action-nav-item(href="/tetris")="Tetris"
           li(class="nav-item")
-            a.action-nav-item(onclick="Account.login('haptagram')")="Link Haptagram App account"
-        if profile && profile.linkedAccountId
+            a.action-nav-item(href="/snake")="Snake"
           li(class="nav-item")
-            a.action-nav-item(onclick="Account.events.logoutHaptagram()")="Disconnect from haptagram"
-        li(class="nav-item")
-          a.action-nav-item(onclick="Account.events.logoutWeb()")="Disconnect from web"
+            a.action-nav-item(href="/poker")="Poker"
+      ul(class="nav-container-horizontaly")
         li(class="nav-item")
           a.action-nav-item(href="/profile")="My profile"
+        li(class="nav-item")
+          a.action-nav-item(onclick="Account.events.logoutWeb()")="Disconnect"
     else
       ul(class="nav-container")
         li(class="nav-item")

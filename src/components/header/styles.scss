@@ -4,8 +4,16 @@ header {
     background: $primary-ligth;
     position: fixed;
     z-index: 1000;
-    width: 15%;
-    height: 100%;
+    width: 100%;
+    max-height: 200px;
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 .nav-button-mobile {
@@ -19,13 +27,12 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    flex-direction: column;
     height: 100%;
     overflow: auto;
 }
 
 .brand {
-    padding: 0 1rem 1rem;
+    padding: 0 1rem;
 }
 
 .close-navigation-header, .open-navigation-header {
@@ -42,7 +49,7 @@ header {
 .nav-container-verticaly {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
     justify-content: flex-start;
     margin-top: 2rem;
@@ -50,21 +57,18 @@ header {
 
 .nav-container-horizontaly {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     height: 100%;
     justify-content: flex-start;
 }
 
 .nav-item {
     padding: 1rem 1rem;
-    margin-bottom: 0.5rem;
-    width: 100%;
     font-weight: 600;
-    cursor: pointer;
     cursor: pointer;
     &:hover {
       background: $primary;
-      border-radius: 5px 5px 0 0;
+      border-radius: 5px;
       transform: scale(1.02);
       color: white; 
     }

@@ -5,7 +5,7 @@ import Notification from "../components/notification/notification";
 import Account from "../components/account/account";
 
 document.addEventListener("DOMContentLoaded", () => {
-  isConnected("admin", (err) => {
+  isConnected("user", (err) => {
     if(err) return console.error('not-access');
     const mainTemplate = fs.readFileSync(__dirname + "/main.pug", "utf-8");
     b('main-container').innerHTML = Pug.render(mainTemplate, { profile: Account.profile })
